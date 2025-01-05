@@ -3,14 +3,17 @@ import Image from "next/image";
 export default function SecondSection() {
     return (
         <div className="pt-10 flex flex-col items-center justify-center pb-10">
-            <h1 className="text-4xl font-bold">Como funciona?</h1>
-            <div className="flex container justify-center items-center gap-x-10">
-                <div>
+            <h1 className="md:text-4xl text-xl font-bold">Como funciona?</h1>
+            <div className="flex container justify-center items-center md:gap-x-10">
+                <div className="hidden md:block">
                     <Image src="/woman.svg" alt="Woman" width={392} height={392} />
                 </div>
-                <div>
-                    <ul className="space-y-4 text-3xl text-slate-600 dark:text-slate-400">
-                        <li className="flex justify-between items-center text-center gap-20">
+                <div className="block md:hidden">
+                    <Image src="/woman.svg" alt="Woman" width={140} height={140} />
+                </div>
+                <div className="px-8 md:px-0">
+                    <ul className="space-y-4 md:text-3xl text-sm text-slate-600 dark:text-slate-400">
+                        <li className="flex justify-between items-center md:gap-20 gap-5">
                             <span>Acesso a 1 ebook por mês</span>
                             <Image src="/check.png" alt="Check" width={21} height={15} />
                         </li>
